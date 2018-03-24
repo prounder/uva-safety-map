@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/uvasafetymap.iml" filepath="$PROJECT_DIR$/uvasafetymap.iml" />
+      <module fileurl="file://C:\Users\Katherine\AndroidStudioProjects\uva-safety-map\app\app.iml" filepath="C:\Users\Katherine\AndroidStudioProjects\uva-safety-map\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uva-safety-map.iml" filepath="$PROJECT_DIR$/uva-safety-map.iml" />
+      <module fileurl="file://C:\Users\Katherine\AndroidStudioProjects\uva-safety-map\uvasafetymap.iml" filepath="C:\Users\Katherine\AndroidStudioProjects\uva-safety-map\uvasafetymap.iml" />
     </modules>
   </component>
 </project>
