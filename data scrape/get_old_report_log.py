@@ -19,8 +19,8 @@ def counter(inc, printInc):
 			#print(count)
 	return count
 
-def parse_log_data(raw_log):
-	data = raw_log.split("\n")
+def parse_log_data(log):
+	data = log
 	#if data[0].split(" ")[0] == "DAILY": #section header
 		#date = "*" + data[1]
 	if len(data) != 4:
@@ -40,6 +40,7 @@ def parse_date_time(datetime):
 	return [date, time] #date, time
 
 def parse_description(rawdata):
+	#print(rawdata)
 	data = re.split("[\–\-]", rawdata)
 	#data = re.split("[^a-zA-Z0-9'\s]+", rawdata) #alphanumeric
 	#print(data)
@@ -59,8 +60,8 @@ def find_address(datalist):
 			break
 	if locdata == "": return "X"
 
-	locdata = re.split("\s{2,}", string)
-	loc = locdata[0].strip()
+	locdata = locdata.split()
+	loc = " ".join(locdata[:-1]).strip()
 	return loc
 
 ##########Code##########
@@ -84,24 +85,41 @@ for year in years:
 	for month in months:
 		driver.get("http://uvapolice.virginia.edu/crime-log-" + month + "-" + year)
 
+		#Print all logs for month in year
+		print("Printing logs for " + month + " " + year + "...")
 		try:
 			section = driver.find_element_by_class_name("field-type-text-with-summary")
 			scraped_logs = section.find_elements_by_xpath(".//div/div/div")
 			
-			#Print all logs for month in year
-			print("Printing logs for " + month + " " + year)
-			counter(0, 0) #Testing
+			#Scrape logs into list
+			log_list = [[]]
+			counter(0, 0)
 			for log in scraped_logs:
-				raw_log = log.text
-				raw_data_file.write(raw_log + "\n\n")
+				line = log.text
+				if line == " ": #indicator to begin new log
+					log = []
+					log_list.append(log)
+					counter(1, 1)
+				else: #add to current log
+					log_list[-1].append(line) 
 
-				data = parse_log_data(raw_log)
+			print("Total sections scraped: " + str(count))
+
+			#Print into output file
+			counter(0, 0)
+			for log in log_list:
+				#for line in log:
+					#raw_data_file.write(line + "\n")
+
+				data = parse_log_data(log)
 				date, time, desc, loc = data
-				if date[0] != "*": #* indicating day header log entry
+				if date[0] != "*": # '*' indicating day header log entry
 					parsed_data_file.write(date+"\t" + time+"\t" + loc+"\t" +desc + "\n")
-					counter(1, 1) #Testing
+					counter(1, 1) 
 
-			print("Total number of logs: " + str(count))
+				raw_data_file.write("\n")
+
+			print("Total logs printed: " + str(count))
 
 		except NoSuchElementException:
 			print("No logs found for " + month + " " + year)
