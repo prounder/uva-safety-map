@@ -4,6 +4,12 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -16,17 +22,23 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import com.google.android.gms.maps.model.Circle;
 import com.google.android.gms.maps.model.CircleOptions;
 import android.graphics.Color;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private static final LatLng UVA = new LatLng(38.0336, -78.507980);
     private FirebaseDatabase db;
+    private ArrayList<String> crimes = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +68,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
 //        Start the map at Charlottesville
         mMap.setMaxZoomPreference(40f);
-        mMap.setMinZoomPreference(15f);
+        mMap.setMinZoomPreference(13f);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(UVA));
 
         mMap.setMyLocationEnabled(true);
@@ -66,6 +78,66 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 //                .position(UVA)
 //                .title("University of Virginia")
 //                .snippet("go hoos"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.050244, -78.500885))
+//                .title("ASSIST CITIZEN"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.031185, -78.498823))
+//                .title("ASSIST AGENCY"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.033446, -78.51493))
+//                .title("UNDERAGE POSSESSION"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.031919, -78.49866))
+//                .title("HIT AND RUN"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.032040, -78.50043))
+//                .title("TRAFFIC ACCIDENT"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.031919, -78.49866))
+//                .title("DOMESTIC DISTURBANCE"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.031185, -78.498823))
+//                .title("LARCENY"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.034771, -78.516652))
+//                .title("SEXUAL ASSAULT"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.051631, -78.499785))
+//                .title("SIMPLE ASSAULT"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.034832, -78.515063))
+//                .title("DRUNK IN PUBLIC"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.039163, -78.505397))
+//                .title("SUICIDE"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.031185, -78.498823))
+//                .title("THREATENING TEXT MESSAGES"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.029105, -78.521101))
+//                .title("BURGLARY"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.049336, -78.510111))
+//                .title("BURGLARY"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.033246, -78.521323))
+//                .title("ANNOYING EMAILS"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.047126, -78.51105))
+//                .title("BURGLARY"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.034961, -78.51057))
+//                .title("PROPERTY DAMAGE"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.038286, -78.503002))
+//                .title("NARCOTICS VIOLATION"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.050146, -78.510278))
+//                .title("BURGLARY"));
+//        mMap.addMarker(new MarkerOptions()
+//                .position(new LatLng(38.032880, -78.51349))
+//                .title("SEXUAL OFFENSE"));
 
         CircleOptions circleOptions = new CircleOptions()
                 .center(UVA)
@@ -96,12 +168,20 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     Map<String, String> td = new HashMap<String, String>();
                     for (DataSnapshot loc : dataSnapshot.getChildren()) {
-                        td.put(loc.getKey(), loc.getValue(String.class));
+//                        Log.d("firebase", dataSnapshot.getChildrenCount() + " #hours");
+                        for(DataSnapshot hour : loc.getChildren()) {
+//                            Log.d("firebase", loc.getChildrenCount() + " #entries");
+                            for(DataSnapshot list : hour.getChildren()) {
+//                                Log.d("firebase", hour.getChildrenCount() + " #cases");
+                                td.put(list.getKey(), list.getValue(String.class));
+                            }
+                        }
                     }
 
 //                ArrayList<Job_Class> values = new ArrayList<>(td.values());
 //                List<String> keys = new ArrayList<String>(td.keySet());
-
+                    crimes.add(td.get("2"));
+                    createMarker(td.get("1"));
                     for (String s : td.keySet()) {
                         Log.d("firebase", s + " : " + td.get(s));
                     }
@@ -114,5 +194,45 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             });
         }
+    }
+
+    private void createMarker(String address) {
+        if(address == null)
+            return;
+        address = address.replace(' ', '+');
+        Log.d("Response is: ", address);
+        String GEOCODE_API = "AIzaSyC55We6_XnAppTxl50XAKBcVedWM0yhAdQ";
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url ="https://maps.googleapis.com/maps/api/geocode/json?address="+address+",+Charlottesville,+VA&key=" + GEOCODE_API;
+
+// Request a string response from the provided URL.
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        // Display the first 500 characters of the response string.
+//                        Log.d("Response is: ", response);
+                        double[] toReturn = new double[2];
+                        int index1 = response.indexOf("lat\" : ")+6;
+                        int index2 = response.indexOf("lng\" : ")+6;
+                        toReturn[0] = Double.parseDouble(response.substring(index1, index1 + 4));
+                        toReturn[1] = Double.parseDouble(response.substring(index2, index2 + 4));
+                        addToLLS(toReturn);
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+               Log.d("Response is: ", "Didn't work");
+            }
+        });
+
+// Add the request to the RequestQueue.
+        queue.add(stringRequest);
+    }
+
+    private void addToLLS(double[] d){
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.050244, -78.500885))
+                .title(crimes.remove(0)));
     }
 }
