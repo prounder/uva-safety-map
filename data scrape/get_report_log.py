@@ -3,6 +3,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 
+import re #for data parsing
+
 ##########Functions##########
 
 count = 0
@@ -19,10 +21,10 @@ def counter(inc, printInc):
 
 def parse_log_data(raw_log):
 	data = raw_log.split("\n")
-	date, time, desc, loc = "x", "x", "x", "x"
-
-	if data[0].split(" ")[0] == "DAILY": #section header
-		date = "*" + data[1]
+	#if data[0].split(" ")[0] == "DAILY": #section header
+		#date = "*" + data[1]
+	if len(data) != 4:
+		date, time, desc, loc = "*", "x", "x", "x"
 	else:
 		date, time = parse_date_time(data[2])
 		desc, loc = parse_description(data[0])
@@ -66,7 +68,8 @@ def find_address(datalist):
 driver = webdriver.Chrome()
 
 months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-years = ["2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"]
+#years = ["2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"]
+years = ["2018"]
 
 for year in years:
 	raw_data_filename = year + "-raw.txt"

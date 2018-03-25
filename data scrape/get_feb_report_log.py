@@ -21,10 +21,10 @@ def counter(inc, printInc):
 
 def parse_log_data(raw_log):
 	data = raw_log.split("\n")
-	date, time, desc, loc = "x", "x", "x", "x"
-
-	if data[0].split(" ")[0] == "DAILY": #section header
-		date = "*" + data[1]
+	#if data[0].split(" ")[0] == "DAILY": #section header
+		#date = "*" + data[1]
+	if len(data) != 4:
+		date, time, desc, loc = "*", "x", "x", "x"
 	else:
 		date, time = parse_date_time(data[2])
 		desc, loc = parse_description(data[0])
@@ -77,7 +77,7 @@ raw_data_file = open(str(raw_data_filename), "w")
 parsed_data_file = open(str(parsed_data_filename), "w")
 
 raw_data_file.write("Crime Log: "  + month + " " + year + "\n")
-parsed_data_file.write("Crime Log: "  + month + " " + year + "\n")
+#parsed_data_file.write("Crime Log: "  + month + " " + year + "\n")
 parsed_data_file.write("Date\tTime\tLocation\tDescription\n")
 
 
