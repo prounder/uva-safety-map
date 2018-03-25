@@ -16,9 +16,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.HashMap;
 import java.util.Map;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
+import android.graphics.Color;
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -64,6 +66,15 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 //                .position(UVA)
 //                .title("University of Virginia")
 //                .snippet("go hoos"));
+
+        CircleOptions circleOptions = new CircleOptions()
+                .center(UVA)
+                .strokeColor(Color.argb(0, 255, 0, 0))
+                .fillColor(Color.argb(50, 255, 0, 0))
+                .radius(500); // In meters
+
+        // Get back the mutable Circle
+        Circle circle = mMap.addCircle(circleOptions);
 
 
     }
