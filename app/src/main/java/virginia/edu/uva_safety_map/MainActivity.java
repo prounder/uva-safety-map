@@ -78,75 +78,75 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 //                .position(UVA)
 //                .title("University of Virginia")
 //                .snippet("go hoos"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.050244, -78.500885))
-//                .title("ASSIST CITIZEN"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.031185, -78.498823))
-//                .title("ASSIST AGENCY"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.033446, -78.51493))
-//                .title("UNDERAGE POSSESSION"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.031919, -78.49866))
-//                .title("HIT AND RUN"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.032040, -78.50043))
-//                .title("TRAFFIC ACCIDENT"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.031919, -78.49866))
-//                .title("DOMESTIC DISTURBANCE"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.031185, -78.498823))
-//                .title("LARCENY"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.034771, -78.516652))
-//                .title("SEXUAL ASSAULT"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.051631, -78.499785))
-//                .title("SIMPLE ASSAULT"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.034832, -78.515063))
-//                .title("DRUNK IN PUBLIC"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.039163, -78.505397))
-//                .title("SUICIDE"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.031185, -78.498823))
-//                .title("THREATENING TEXT MESSAGES"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.029105, -78.521101))
-//                .title("BURGLARY"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.049336, -78.510111))
-//                .title("BURGLARY"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.033246, -78.521323))
-//                .title("ANNOYING EMAILS"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.047126, -78.51105))
-//                .title("BURGLARY"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.034961, -78.51057))
-//                .title("PROPERTY DAMAGE"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.038286, -78.503002))
-//                .title("NARCOTICS VIOLATION"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.050146, -78.510278))
-//                .title("BURGLARY"));
-//        mMap.addMarker(new MarkerOptions()
-//                .position(new LatLng(38.032880, -78.51349))
-//                .title("SEXUAL OFFENSE"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.050244, -78.500885))
+                .title("ASSIST CITIZEN"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.031185, -78.498823))
+                .title("ASSIST AGENCY"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.033446, -78.51493))
+                .title("UNDERAGE POSSESSION"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.031919, -78.49866))
+                .title("HIT AND RUN"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.032040, -78.50043))
+                .title("TRAFFIC ACCIDENT"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.031919, -78.49866))
+                .title("DOMESTIC DISTURBANCE"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.031185, -78.498823))
+                .title("LARCENY"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.034771, -78.516652))
+                .title("SEXUAL ASSAULT"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.051631, -78.499785))
+                .title("SIMPLE ASSAULT"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.034832, -78.515063))
+                .title("DRUNK IN PUBLIC"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.039163, -78.505397))
+                .title("SUICIDE"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.031185, -78.498823))
+                .title("THREATENING TEXT MESSAGES"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.029105, -78.521101))
+                .title("BURGLARY"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.049336, -78.510111))
+                .title("BURGLARY"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.033246, -78.521323))
+                .title("ANNOYING EMAILS"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.047126, -78.51105))
+                .title("BURGLARY"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.034961, -78.51057))
+                .title("PROPERTY DAMAGE"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.038286, -78.503002))
+                .title("NARCOTICS VIOLATION"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.050146, -78.510278))
+                .title("BURGLARY"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38.032880, -78.51349))
+                .title("SEXUAL OFFENSE"));
 
-        CircleOptions circleOptions = new CircleOptions()
-                .center(UVA)
-                .strokeColor(Color.argb(0, 255, 0, 0))
-                .fillColor(Color.argb(50, 255, 0, 0))
-                .radius(500); // In meters
-
-        // Get back the mutable Circle
-        Circle circle = mMap.addCircle(circleOptions);
+//        CircleOptions circleOptions = new CircleOptions()
+//                .center(UVA)
+//                .strokeColor(Color.argb(0, 255, 0, 0))
+//                .fillColor(Color.argb(50, 255, 0, 0))
+//                .radius(500); // In meters
+//
+//        // Get back the mutable Circle
+//        Circle circle = mMap.addCircle(circleOptions);
 
 
     }
@@ -232,7 +232,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void addToLLS(double[] d){
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(38.050244, -78.500885))
+                .position(new LatLng(d[0], d[1]))
                 .title(crimes.remove(0)));
     }
 }
