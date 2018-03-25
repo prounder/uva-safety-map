@@ -14,9 +14,14 @@ import com.google.android.gms.maps.model.Circle;
 import com.google.android.gms.maps.model.CircleOptions;
 import android.graphics.Color;
 
+import java.io.InputStream;
+import java.util.List;
+import android.util.Log;
+
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private List data;
     private static final LatLng UVA = new LatLng(38.0336, -78.5080);
 
     @Override
@@ -27,6 +32,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        InputStream inputStream = getResources().openRawResource(R.raw.parseddata);
+        CSVFile csvFile = new CSVFile(inputStream);
+        data = csvFile.read();
+        Log.i("file structure", data.get(1).toString());
     }
 
 
