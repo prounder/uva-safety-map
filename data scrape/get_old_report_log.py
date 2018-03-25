@@ -67,47 +67,48 @@ def find_address(datalist):
 
 driver = webdriver.Chrome()
 
-month = "February"
-year = "2018"
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+years = ["2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"]
 
-raw_data_filename = month + "-" + year + "-raw.txt"
-parsed_data_filename = month + "-" + year + "-parsed.txt"
+for year in years:
+	raw_data_filename = year + "-raw.txt"
+	parsed_data_filename = year + "-parsed.txt"
 
-raw_data_file = open(str(raw_data_filename), "w")
-parsed_data_file = open(str(parsed_data_filename), "w")
+	raw_data_file = open(str(raw_data_filename), "w")
+	parsed_data_file = open(str(parsed_data_filename), "w")
 
-raw_data_file.write("Crime Log: "  + month + " " + year + "\n")
-#parsed_data_file.write("Crime Log: "  + month + " " + year + "\n")
-parsed_data_file.write("Date\tTime\tLocation\tDescription\n")
+	raw_data_file.write("Crime Log: " + year + "\n")
+	#parsed_data_file.write("Crime Log: "  + month + " " + year + "\n")
+	parsed_data_file.write("Date\tTime\tLocation\tDescription\n")
 
+	for month in months:
+		driver.get("http://uvapolice.virginia.edu/crime-log-" + month + "-" + year)
 
-driver.get("http://uvapolice.virginia.edu/crime-log-" + month + "-" + year)
+		try:
+			section = driver.find_element_by_class_name("field-type-text-with-summary")
+			scraped_logs = section.find_elements_by_xpath(".//div/div/div")
+			
+			#Print all logs for month in year
+			print("Printing logs for " + month + " " + year)
+			counter(0, 0) #Testing
+			for log in scraped_logs:
+				raw_log = log.text
+				raw_data_file.write(raw_log + "\n\n")
 
-try:
-	section = driver.find_element_by_class_name("field-type-text-with-summary")
-	scraped_logs = section.find_elements_by_xpath(".//div/div/div/p")
-	
-	#Print all logs for month in year
-	print("Printing logs for " + month + " " + year)
-	counter(0, 0) #Testing
-	for log in scraped_logs:
-		raw_log = log.text
-		raw_data_file.write(raw_log + "\n\n")
+				data = parse_log_data(raw_log)
+				date, time, desc, loc = data
+				if date[0] != "*": #* indicating day header log entry
+					parsed_data_file.write(date+"\t" + time+"\t" + loc+"\t" +desc + "\n")
+					counter(1, 1) #Testing
 
-		data = parse_log_data(raw_log)
-		date, time, desc, loc = data
-		if date[0] != "*": #* indicating day header log entry
-			parsed_data_file.write(date+"\t" + time+"\t" + loc+"\t" +desc+"\t" + "\n")
-			counter(1, 1) #Testing
+			print("Total number of logs: " + str(count))
 
-	print("Total number of logs: " + str(count))
+		except NoSuchElementException:
+			print("No logs found for " + month + " " + year)
+			raw_data_file.write("No logs found for " + month + " " + year)
 
-except NoSuchElementException:
-	print("No logs found for " + month + " " + year)
-	raw_data_file.write("No logs found for " + month + " " + year)
-
-raw_data_file.close()
-parsed_data_file.close()
+	raw_data_file.close()
+	parsed_data_file.close()
 
 driver.close()
 
