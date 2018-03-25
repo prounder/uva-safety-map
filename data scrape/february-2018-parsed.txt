@@ -1,0 +1,144 @@
+Crime Log: February 2018
+Date	Time	Location	Description
+1641		 1001 Emmet Street                         201802504/61	FRAUD 	
+2105		 1215 Lee Street                        201802530/51	ASSIST CITIZEN 	
+2203		 1215 Lee Street                    201802531/51	ASSIST AGENCY-WARRANT SERVICE 	
+0007		 435 Tree House Drive            201802540/35	ASSIST CITIZEN/UNDERAGE POSSESSION 	
+0846		 1101 Millmont Street                    201802559/39	ASSIST CITIZEN-MEDICAL 	
+0940		 1210 Lee Street                            201802560/68	HIT AND RUN 	
+0953		 1340 Jefferson Park Avenue                     201802561/32	TRAFFIC ACCIDENT 	
+1342		 1215 Lee Street                            201802568/68	ASSIST AGENCY 	
+1612		 1210 Lee Street                        201802573/51	DOMESTIC DISTURBANCE 	
+2120		 1215 Lee Street                            201802589/51	LOST PROPERTY 	
+0102		 478 Floyd Drive                201802614/62	ASSIST CITIZEN, UNDERAGE POSSESSION 	
+0115		 450 McCormick Drive            201802616/36	ASSIST CITIZEN, UNDERAGE POSSESSION 	
+0150		 1215 Lee Street                            201802620/36	LARCENY 	
+1253		 555 McCormick Rd                         201802646/51	UNDERAGE POSSESSION 	
+1900		561 McCormick Road                         201802689/15	SEXUAL ASSAULT 	
+0017		 1136 Emmet Street                        201802693/36	SIMPLE ASSAULT 	
+2336		 525 McCormick Road                            201802808/36	DIP 	
+0952		 1315 Lee Street                        201802828/32	ASSIST CITIZEN 	
+1001		 2304 Ivy Road                            201802829/26	ASSIST AGENCY 	
+0007		 180 Culbreth Road                             201802869/44	SUICIDE 	
+1105		 1215 Lee Street                    201802892/52	THREATENING TEXT MESSAGES 	
+0520		 1215 Lee Street                        201802964/34	DRUNK IN PUBLIC 	
+1395		 1101 Millmont Street                        201802981/33	FOUND PROPERTY 	
+2209		 436 McCormick Road                201803011/63	ASSIST CITIZEN/UNDERAGE POSSESSION 	
+2209		 436 McCormick Road                    201803017/63	POSSESSION OF MARIJUANA 	
+0223		 425 Tree House Drive                    201803018/48	ASSIST CITIZEN 	
+1030		 2304 Ivy Road                         201803035/33	SUSPICIOUS INCIDENT 	
+1816		 2504 Stadium Road                             201803053/63	BURGLARY 	
+2053		 510 Seymour Road                            201803064/62	BURGLARY 	
+2219		128 Chancellor Street                      201803067/46	UNDERAGE POSSESSION 	
+0042		 201 Sprigg Lane                        201803076/24	FOUND PROPERTY 	
+0110		 463 Lambeth Road                    201803078/45	ASSIST CITIZEN/MEDICAL 	
+0314		 201 Sprigg Lane                201803087/45	MEDICAL ASSIST/UNDERAGE POSSESSION 	
+1056		 1215 Lee Street                            201803101/58	LARCENY 	
+1132		 15 Alden Street                         201803102/52	ANNOYING EMAIL 	
+1229		 278 North Peyton Court                        201803103/65	HIT AND RUN 	
+1230		 406 Farrish Circle                              201803105/58	BURGLARY 	
+1320		 31 Bonnycastle Drive                          201803106/52	PROPERTY DAMAGE 	
+1619		 155 Rugby Road                              201803110/62	ASSIST AGENCY 	
+1619		 155 Rugby Road                        201803114/62	NARCOTIC VIOLATION 	
+1806		 547 Seymour Road                            201803118/62	BURGLARY 	
+2202		 450 McCormick                201803139/46	NARCOTICS VIOLATION/UNDERAGE POSSESSION 	
+2222		 155 Rugby Road                            201803141/62	ASSIST AGENCY 	
+2349		MEDICAL ASSIST/UNDERAGE POSSESSION- 425 Tree House Drive            201803143/36	MEDICAL ASSIST/UNDERAGE POSSESSION- 425 Tree House Drive            201803143/36	
+0015		 579 McCormick Road                201803145/36	MEDICAL ASSIST/UNDERAGE POSSESSION 	
+0157		 1427 University Avenue                    201803159/44	DRUNK IN PUBLIC 	
+0956		 314 W. Echols, McCormick                201803185/65	ASSIST CITIZEN-WELFARE CHECK 	
+1516		 50 Lambeth Field                        201803202/62	SUSPICIOUS VEHICLE 	
+1905		 525McCormick Road                201803226/46	ASSIST CITIZEN-UNDERAGE POSSESSION	
+0238		 1619 University Avenue                            201803277/46	DUI 	
+0313		 295 Massie Road                        201803279/36	DRUNK IN PUBLIC 	
+0402		 1415 Jefferson Park Avenue                    201803281/56	DRUNK IN PUBLIC 	
+0959		 1215 Lee Street                201803296/33	ASSIST AGENCY 	
+2055		 450 Whitehead Road                20183343/46	SEX OFFENSE- FORCIBLE FONDLING 	
+1916		 165 Rugby Avenue                            201803336/62	LARCENY 	
+0056		 395 McCormick Road                         201803354/36	FIRES NOT ARSON	
+		 The Lawn                        201803358/44	DRUNK IN PUBLIC/TRESPASS 	
+		 2304 Ivy Road                            201803369/26	ASSIST AGENCY 	
+1606		 102 Amphitheater Way                     201803375/31	DISTRIBUTION OF FLYERS 	
+1617		 1215 Lee Street                        201803376/62	ANNOYING PHONE CALLS 	
+0704		 14 East Lawn                         201803447/44	SUSPICIOUS FLYER 	
+0722		 245 Hereford Drive                     201803448/34	DISTRIBUTION OF FLYERS 	
+0644		 485 McCormick Road                         201803449/37	LOST PROPERTY	
+		 1540 E JPA                        201803451/65	SUSPICIOUS NOTE ON DOOR 	
+		 525 McCormick Road                        201803459/31	LOST PROPERTY 	
+		 1215 Lee Street                        201803460/61	FOUND PROPERTY 	
+		 1215 Lee Street                            201803498/63	ASSIST AGENCY 	
+0555		 1101 Millmont Street        NO PI                    201803517/57	ACCIDENT 	
+1125		 400 Brandon Avenue                    201803523/58	ANNOYING PHONE CALLS 	
+1635		 1215 Lee Street        NO PI                    201803532/61	ACCIDENT 	
+1552		 295 Massie Road                        201803533/63	ANNOYING PHONE CALLS 	
+1959		 520 Buckler Drive                            201803546/46	ASSAULT 	
+2023		 McCormick Road/University Avenue    NO PI                201803549/31	ACCIDENT 	
+2055		 510 Seymour Road                        201803552/31	SUSPICIOUS ACTIVITY 	
+0946		 112 11th Street                        201803596/58	ATTEMPTED LARCENY	
+1365		 160 McCormick Road                            201803605/58	LARCENY 	
+1351		 1215 Lee Street                         201803603/25	FOUND PROPERTY 	
+2237		 72 Monroe Hill Road                        201803649/61	DRUG VIOLATION 	
+02-16-18	0159	MEDICAL ASSIST, UNDERAGE POSSESSION 165 Rugby Road                201803660/56	MEDICAL ASSIST, UNDERAGE POSSESSION 165 Rugby Road                201803660/56	
+0000		 450 Treehouse Drive                    201803661/46	DIP, RESIST ARREST 	
+0245		 130 Culbreth Road                            201803662/56	CAR ALARM	
+0352		 2 Pavilion                                201803664/48	TRESPASS 	
+0824		 1240 Lee Street                            201803667/58	LARCENY 	
+2048		 600 McCormick Road                        201803694/51	FIRE, NOT ARSON 	
+02-17-18	0113	 80 Monroe Hill Rd                201803713/44	MEDICAL ASSIST, UNDERAGE POSSESSION 	
+0138		 University Avenue                                201803716/61	DIP 	
+0153		 248 McCormick Road                            201803718/44	DIP 	
+0230		 1309 West Main Street                            201803723/46	DIP 	
+2111		 1210 Lee Street        NO PI                    201803764/51	HIT AND RUN 	
+0010		 425 Treehouse Drive                    201803776/36	UNDERAGE POSSESSION 	
+0027		 1409 University Ave                    201803777/46	UNDERAGE POSSESSION 	
+02-18-18	0055	 Jefferson Park Avenue/ West Main                201803783/57	DRUNK IN PUBLIC 	
+0126		 120 Chancellor Street                    201803785/56	ASSIST CITIZEN - MEDICAL	
+0325		 1826 University Ave                            201803798/44	DIP 	
+0834		 1215 Lee Street                        201803812/32	ASSAULT SIMPLE 	
+0934		 1215 Lee Street                    201803814/32	ASSIST CITIZEN-WELFARE CHECK 	
+1948		 548 Buckler Drive                    201803847/46	ASSIST CITIZEN - MEDICAL	
+02-18-18	2050	 1215 Lee Street                        20183854/62	SIMPLE ASSAULT 	
+0226		 1215 Lee Street                         201803869/44	DRUNK IN PUBLIC 	
+1519		 1335 Lee Street                            201803888/52	ASSIST CITIZEN	
+1616		 1215 Lee Street                             201803890/61	VANDALISM 	
+02-19-18	22:15	 1540 Jefferson Park Avenue                    201803927/61	FIRE 	
+2327		 225 Hereford Drive                    201803931/56	ASSIST CITIZEN-MEDICAL 	
+0205		 Rugby Road / Culbreth Road                    201803942/44	ASSIST AGENCY 	
+0920		 117 11th Street SW        NO PI                    201803961/52	ACCIDENT 	
+1233		 476 Faulkner Way    NO PI                        201803964/25	HIT AND RUN 	
+1715		852 West Main Street                         201803973/46	ASSIST CITIZEN 	
+2032		180 McCormick Road                        201803987/62	FOUND PROPERTY 	
+0129		 1215 Lee Street                        201804000/48	FOUND PROPERTY 	
+0136		 1210 Lee Street                        201804002/56	ASSIST CITIZEN 	
+0330		 1215 Lee Street                            201804005/48	LARCENY 	
+0341		 1215 Lee Street                            201804006/56	ASSAULT 	
+1310		 1215 Lee Street                        201804027/65	ANNOYING PHONE CALL 	
+1531		 1215 Lee Street                    201804033/63	ASSIST AGENCY/WARRANT SERVICE 	
+1649		 1219 Lee Street         NO PI                    201804036/61	HIT AND RUN 	
+2338		 1826 University Avenue                        201804056/44	HARASSMENT 	
+1213		 295 Massie Road            NO PI                201804087/25	HIT AND RUN 	
+1900		 291 McCormick Road                        201804102/61	SIMPLE ASSAULT 	
+1922		 450 Whitehead Road                            201804106/63	LARCENY 	
+0114		 25 Hancock Drive                 201804129/35	ASSIST CITIZEN, UNDERAGE POSESSION	
+0201		 571 McCormick Road             201804137/35	ASSIST CITIZEN, UNDERAGE POSSESSION 	
+0023		 514 Buckler Road                     201804226/61	DRUGS/NARCOTICS VIOLATION	
+0024		 1700 University Ave    NO PI                     201804227/48	HIT AND RUN	
+0101		 1702 University Avenue                         201804228/35	TRESPASSING 	
+0223		 430 Tree House Drive            201804231/48	ASSIST CITIZEN, UNDERAGE POSSESSION	
+0227		 450 Tree House Drive                         201804232/61	ASSAULT SIMPLE	
+2104		 Massie Road/Lannigan Lane                        201804279/51	ASSAULT SIMPLE	
+2200		 295 Massie Road                                201804307/44	ASSAULT SIMPLE	
+0032		 800 Alderman Road                        201804311/57	DRUNK IN PUBLIC 	
+0841		 164 NW McCormick Road                          201804400/65	VANDALISM 	
+1041		 202 Jeanette Lancaster Way                          201804402/58	BURGLARY 	
+1345		 180 McCormick Road                         201804406/33	LOST PROPERTY	
+1406		 2450 W OLD IVY ROAD                           201804407/65	PROPERTY DAMAGE 	
+2055		 1826 University Avenue                    201804436/44	SUSPICIOUS FLYER 	
+2208		 1215 Lee Street                             201804445/63	LOST PROPERTY	
+02-27-18	0544	 1826 University Avenue                        201804474/27	TRESPASS 	
+1836		 1826 University Ave                          201804507/44	SUSPICIOUS PERSON 	
+1957		 1335 Lee Street                         201804511/36	PROPERTY DAMAGE	
+02-27-18	2119	 1003 Main Street                            201804516/44	VANDALISM 	
+1448		 1540 Jefferson Park Ave                          201804570/65	LOST PROPERTY 	
+1530		1516 Jefferson Park Ave                        201804572/62	FOUND PROPERTY	
+02-28-18	1557	THREATENING PHONE CALL- 525 McCormick Road                     201804574/36	THREATENING PHONE CALL- 525 McCormick Road                     201804574/36	
