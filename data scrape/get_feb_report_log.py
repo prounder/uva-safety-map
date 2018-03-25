@@ -3,6 +3,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 
+import re #for data parsing
+
 ##########Functions##########
 
 count = 0
@@ -17,13 +19,49 @@ def counter(inc, printInc):
 			#print(count)
 	return count
 
-def parse_description(desc):
-	data = desc.split("–")
-	return [data[0], data[-1]] #desc, location
+def parse_log_data(raw_log):
+	data = raw_log.split("\n")
+	date, time, desc, loc = "x", "x", "x", "x"
+
+	if data[0].split(" ")[0] == "DAILY": #section header
+		date = "*" + data[1]
+	else:
+		date, time = parse_date_time(data[2])
+		desc, loc = parse_description(data[0])
+	return [date, time, desc, loc]
 
 def parse_date_time(datetime):
-	data = datetime.split(" ")
-	return [data[2], data[1]] #date, time
+	#data = datetime.split(" ")
+	data = re.split("[\s]+", datetime)
+	#print(data)
+	#date, time = "x", "x"
+	date = data[2].strip()
+	time = data[1].strip()
+	return [date, time] #date, time
+
+def parse_description(rawdata):
+	data = re.split("[\–\-]", rawdata)
+	#data = re.split("[^a-zA-Z0-9'\s]+", rawdata) #alphanumeric
+	#print(data)
+	if len(data) <= 1: return ["x", "x"]
+
+	desc = data[0].strip()
+	loc = find_address(data)
+	return [desc, loc] #desc, location
+
+def find_address(datalist):
+	locdata = ""
+	for string in datalist:
+		string = string.strip()
+		if re.match(r".*[0-9]$", string) != None:
+			locdata = string
+			#print(locdata)
+			break
+	if locdata == "": return "X"
+
+	locdata = re.split("\s{2,}", string)
+	loc = locdata[0].strip()
+	return loc
 
 ##########Code##########
 
@@ -42,7 +80,7 @@ raw_data_file.write("Crime Log: "  + month + " " + year + "\n")
 parsed_data_file.write("Crime Log: "  + month + " " + year + "\n")
 parsed_data_file.write("Date\tTime\tLocation\tDescription\n")
 
-#driver.get("http://uvapolice.virginia.edu/crime-log-february-2018")
+
 driver.get("http://uvapolice.virginia.edu/crime-log-" + month + "-" + year)
 
 try:
@@ -56,10 +94,9 @@ try:
 		raw_log = log.text
 		raw_data_file.write(raw_log + "\n\n")
 
-		data = raw_log.split("\n")
-		if data[0].split(" ")[0] != "DAILY":
-			date, time = parse_date_time(data[2])
-			desc, loc = parse_description(data[0])
+		data = parse_log_data(raw_log)
+		date, time, desc, loc = data
+		if date[0] != "*": #* indicating day header log entry
 			parsed_data_file.write(date+"\t" + time+"\t" + loc+"\t" +desc+"\t" + "\n")
 
 		counter(1, 1) #Testing
