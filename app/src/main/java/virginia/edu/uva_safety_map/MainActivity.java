@@ -8,11 +8,13 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private static final LatLng UVA = new LatLng(38.0336, -78.5080);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,5 +44,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setMaxZoomPreference(40f);
         mMap.setMinZoomPreference(15f);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(38.0336, -78.507980)));
+
+        Marker uva = mMap.addMarker(new MarkerOptions()
+                .position(UVA)
+                .title("University of Virginia")
+                .snippet("go hoos"));
     }
 }
